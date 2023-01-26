@@ -1,2 +1,4 @@
 # Project exclude paths
 /build/
+/node_modules/
+/temp.mjs
