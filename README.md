@@ -4,3 +4,5 @@
 - Wait util I write action script. Now I need to __sleep__.
 - Or clone this repo, install node_modules and run `node build.mjs`. And run with `node build/index.js`
 - Good `night`
+
+![](showcases/pic1.png)
