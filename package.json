@@ -1,0 +1,31 @@
+{
+  "name": "emojiterm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "emojilib": "^3.0.8",
+    "ink": "^3.2.0",
+    "ink-text-input": "^4.0.3",
+    "lodash": "^4.17.21",
+    "node-emoji": "^1.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "unicode-emoji-json": "^0.4.0"
+  },
+  "scripts": {
+    "watch": "node build.mjs --watch",
+    "build": "node build.mjs",
+    "dev": "DEV=true node build/index.js",
+    "build:run": "node build.mjs && DEV=true node build/index.js",
+    "react-devtools": "react-devtools"
+  },
+  "devDependencies": {
+    "chalk": "^5.2.0",
+    "chokidar": "^3.5.3",
+    "esbuild": "^0.15.13",
+    "fs-extra": "^11.1.0",
+    "ink-divider": "^3.0.0",
+    "react-devtools": "^4.27.1"
+  }
+}
