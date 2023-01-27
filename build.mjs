@@ -2,7 +2,7 @@ import esbuild from 'esbuild';
 import fs from 'fs-extra';
 import chalk from 'chalk';
 import chokidar from 'chokidar';
-
+import fsBasic from 'fs';
 const watch = process.argv.includes('--watch');
 
 const esBuildOptions = {
@@ -72,10 +72,19 @@ if (watch) {
             }
         })
 } else {
+    const shebang = "#!/usr/bin/env node"
     cleanBuildDir();
     console.log(chalk.blue('[esbuild] ') + ' Building ...');
     console.time(chalk.blue("build done"))
     await cleanBuild();
     console.timeEnd(chalk.blue("build done"))
+    console.time("Shebang add")
+    // read file
+    const binFile = fsBasic.readFileSync("build/index.js", "utf8");
+    // add shebang
+    const binFileWithShebang = shebang + "\n" + binFile;
+    // write file
+    fsBasic.writeFileSync("build/index.js", binFileWithShebang);
+    console.timeEnd("Shebang add")
     process.exit(0);
 }

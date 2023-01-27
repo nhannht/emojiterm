@@ -1,8 +1,9 @@
 {
   "name": "emojiterm",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "main": "index.js",
   "license": "MIT",
+  "bin":"build/index.js",
   "dependencies": {
     "emojilib": "^3.0.8",
     "ink": "^3.2.0",
@@ -30,6 +31,7 @@
     "fs-extra": "^11.1.0",
     "husky": "^8.0.3",
     "ink-divider": "^3.0.0",
+    "pkg": "^5.8.0",
     "react-devtools": "^4.27.1"
   }
 }
