@@ -12,8 +12,8 @@ jobs:
         with:
           node-version: 16
       - run: npm install yarn
-      - run: yarn install
-      - run: yarn build
+      - run: yarn install --force
+      - run: node build.mjs
       - run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           yarn publish
