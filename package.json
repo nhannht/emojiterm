@@ -21,10 +21,13 @@
     "react-devtools": "react-devtools"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "chalk": "^5.2.0",
     "chokidar": "^3.5.3",
     "esbuild": "^0.15.13",
     "fs-extra": "^11.1.0",
+    "husky": "^8.0.3",
     "ink-divider": "^3.0.0",
     "react-devtools": "^4.27.1"
   }
