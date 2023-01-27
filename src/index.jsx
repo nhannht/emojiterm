@@ -3,7 +3,6 @@ import {render, Text, Box} from 'ink';
 import TextInput from 'ink-text-input';
 import emojilib from 'emojilib' assert {type: 'json'};
 import emojiDataJson from 'unicode-emoji-json' assert {type: 'json'};
-import emojiGroups from 'unicode-emoji-json/data-by-group.json' assert {type: 'json'};
 import {uniq} from 'lodash';
 
 for (const emo in emojiDataJson) {
@@ -12,16 +11,16 @@ for (const emo in emojiDataJson) {
 
 const MyApp = () => {
     const [query, setQuery] = useState('cat');
-    const [emojiData, setEmojiData] = useState(emojiDataJson);
+    const [emojiData] = useState(emojiDataJson);
 
     const [currentEmoji, setCurrentEmoji] = useState('');
-    const [countEmoji, setCountEmoji] = useState(Object.keys(emojiData).length);
+    const [countEmoji] = useState(Object.keys(emojiData).length);
 
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;
 
         // While there remain elements to shuffle.
-        while (currentIndex != 0) {
+        while (currentIndex !== 0) {
 
             // Pick a remaining element.
             randomIndex = Math.floor(Math.random() * currentIndex);
