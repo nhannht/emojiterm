@@ -2,7 +2,7 @@ name: publish_to_npm
 on:
   push:
     branches:
-      - develop
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
