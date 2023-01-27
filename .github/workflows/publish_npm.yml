@@ -11,8 +11,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install yarn
-      - run: yarn install --force
+      - run: npm install --global yarn
+      - run: yarn install
       - run: node build.mjs
       - run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
